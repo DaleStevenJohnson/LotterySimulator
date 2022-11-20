@@ -21,6 +21,25 @@ namespace Simulator
             Communities.Add(new Community());
         }
 
+        public int SumHouseholds()
+        {
+            var total = 0;
+            foreach (var c in Communities)
+            {
+                total += c.GetHouseholdCount();
+            }
+            return total;
+        }
+
+        public int SumOccupants()
+        {
+            var total = 0;
+            foreach (var c in Communities)
+            {
+                total += c.GetOccupantCount();
+            }
+            return total;
+        }
       
     }
 }

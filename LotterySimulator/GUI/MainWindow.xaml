@@ -19,15 +19,25 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <UserControl>   
+                <control:DataItem DataContext="{Binding CommunityCountDataItem}"/>
+            </UserControl>
 
-        <UserControl>
-            <control:DataItem DataContext="{Binding CommunityCountDataItem}"/>
-        </UserControl>
-        <Button Grid.Column="1" Margin="30" Content="Add Community" Command="{Binding AddCommunityButtonCommand}"/>
+            <UserControl>
+                <control:DataItem DataContext="{Binding HouseholdCountDataItem}"/>
+            </UserControl>
+
+            <UserControl>
+                <control:DataItem DataContext="{Binding PeopleCountDataItem}"/>
+            </UserControl>
+        </StackPanel>
+        
+        <Button Grid.Column="0" Margin="1" Content="Add Community" Command="{Binding AddCommunityButtonCommand}"/>
         <Canvas x:Name="canvas">
             
         </Canvas>

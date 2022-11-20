@@ -21,5 +21,9 @@ namespace Simulator.Population
         }
         public List<Person> Occupants { get; set; }
 
+        public int GetOccupantCount()
+        { 
+            return Occupants.Count;
+        }
     }
 }

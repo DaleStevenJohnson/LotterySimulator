@@ -21,5 +21,20 @@ namespace Simulator.Population
                 Households.Add(new Household());
             }
         }
+
+        public int GetHouseholdCount()
+        {
+            return Households.Count;
+        }
+
+        public int GetOccupantCount()
+        {
+            var total = 0; 
+            foreach (var house in Households)
+            {
+                total += house.GetOccupantCount();
+            }
+            return total;
+        }
     }
 }
