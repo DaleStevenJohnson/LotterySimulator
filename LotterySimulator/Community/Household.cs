@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Community
+namespace Simulation.Populatio
 {
     public class Household
     {
