@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
+        xmlns:control="clr-namespace:GUI.Control"
         xmlns:viewmodel="clr-namespace:GUI.ViewModel"
         d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
         mc:Ignorable="d"
@@ -22,6 +23,11 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+
+        <UserControl>
+            <control:DataItem DataContext="{Binding CommunityCountDataItem}"/>
+        </UserControl>
+        <Button Grid.Column="1" Margin="30" Content="Add Community" Command="{Binding AddCommunityButtonCommand}"/>
         <Canvas x:Name="canvas">
             
         </Canvas>

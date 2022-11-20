@@ -10,11 +10,17 @@ namespace Simulator
             Communities = new List<Community>();
             for (int i = 0; i < size; i++)
             {
-                Communities.Add(new Community());
+                AddCommunity();
             }
         }
 
-        public List<Community> Communities { get; set; }    
+        public List<Community> Communities { get; set; }
 
+        public void AddCommunity()
+        {
+            Communities.Add(new Community());
+        }
+
+      
     }
 }

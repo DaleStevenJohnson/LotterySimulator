@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Simulator.Tickets
+namespace GUI.Model
 {
-    public interface ITicket
+    internal interface IDataItem
     {
-        public int[] Numbers { get; }
+        public string Label { get; }
+        public int Data { get; set; }
     }
 }
